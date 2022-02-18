@@ -1,0 +1,40 @@
+\ProvidesPackage{resume}
+
+% Set paper margins
+\usepackage{geometry}
+\geometry{
+    bmargin=2.5cm,
+    tmargin=2.5cm,
+    lmargin=2.5cm,
+    rmargin=2.5cm
+}
+% Set paragraph indent and spacing
+\setlength{\parindent}{0em}
+% Disable section numbering
+\setcounter{secnumdepth}{0}
+% Customize itemize environments
+\usepackage{enumitem}
+\setlist[itemize]{label={},leftmargin=*}
+% Pazo font-family
+\usepackage[sc]{mathpazo}
+
+% Configure \maketitle command
+\newcommand*{\email}[1]{\gdef\@email{#1}}
+\newcommand*{\@email}{your@email.here}
+\newcommand*{\github}[1]{\gdef\@github{#1}}
+\newcommand*{\@github}{github_account}
+\newcommand*{\phone}[1]{\gdef\@phone{#1}}
+\newcommand*{\@phone}{(123) 456-7890}
+\newcommand*{\website}[1]{\gdef\@website{#1}}
+\newcommand*{\@website}{https://your.website.here}
+\newcommand*{\separator}{\rule{\linewidth}{0.4pt}}
+\renewcommand*{\maketitle}{
+{\LARGE\bfseries \@author}\par
+\separator
+\begin{flushleft}
+\texttt{\@email} \hfill \texttt{https://github.com/\@github/}\linebreak
+\@phone \hfill \texttt{\@website}
+\end{flushleft}
+\vspace{0.25em}
+}
+\endinput

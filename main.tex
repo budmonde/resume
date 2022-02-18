@@ -1,36 +1,20 @@
 \documentclass[10pt]{article}
 
-\usepackage[sc]{mathpazo}
-\usepackage{geometry}
- \geometry{
- bmargin=1in,
- tmargin=1in,
- lmargin=1in,
- rmargin=1in
- }
-\usepackage{enumitem}
-\setlist[itemize]{label={},leftmargin=*}
+\usepackage{resume}
 
-\usepackage{titlesec}
-\titleformat*{\section}{\LARGE\bfseries}
-\titleformat*{\subsection}{\Large\bfseries}
-
+\author{Budmonde Duinkharjav}
+\email{budmonde@gmail.com / budmonde@nyu.edu}
+\github{budmonde}
+\phone{(650) 505-3525}
+\website{https://budmonde.com/}
 
 \begin{document}
 
-\section*{Budmonde Duinkharjav}
-\vspace*{-\baselineskip}
-\noindent\rule{\linewidth}{0.4pt}
+\maketitle
 
-\begin{flushleft}
-\texttt{budmonde@gmail.com / budmonde@nyu.edu} \hfill \texttt{https://github.com/budmonde/} \linebreak
-(650) 505-3525 \hfill \texttt{https//budmonde.github.io/}
-\end{flushleft}
+\newenvironment{area}[1]{{\large\bfseries #1}\\\separator}{\vspace{0.25em}}
 
-\subsection*{Education}
-\vspace*{-\baselineskip}
-\noindent\rule{\linewidth}{0.4pt}
-
+\begin{area}{Education}
 \begin{itemize}
     \item
         \textbf{New York University} \hfill \emph{Brooklyn, NY}
@@ -54,11 +38,9 @@
                 \textbf{Bachelor of Science} in Computer Science and Engineering \hfill \emph{Fall 2014 - Spring 2018}
         \end{itemize}
 \end{itemize}
+\end{area}
 
-\subsection*{Research Experience}
-\vspace*{-\baselineskip}
-\noindent\rule{\linewidth}{0.4pt}
-
+\begin{area}{Research Experience}
 \begin{itemize}
     \item
         \textbf{Massachusetts Institute of Technology, CSAIL}, Cambridge, MA \hfill \emph{Fall 2017 - Spring 2019} \linebreak
@@ -81,11 +63,9 @@
             \item Analyzed the fluid behavior of water droplet collisions on flat surfaces.
         \end{itemize}
 \end{itemize}
+\end{area}
 
-\subsection*{Work Experience}
-\vspace*{-\baselineskip}
-\noindent\rule{\linewidth}{0.4pt}
-
+\begin{area}{Work Experience}
 \begin{itemize}
     \item
         \textbf{Facebook}, Seattle, WA \hfill \emph{Fall 2019 - Spring 2020} \linebreak
@@ -107,11 +87,9 @@
             \item Worked on optimizing request latency and back-end throughput efficiency.
         \end{itemize}
 \end{itemize}
+\end{area}
 
-\subsection*{Teaching Experience}
-\vspace*{-\baselineskip}
-\noindent\rule{\linewidth}{0.4pt}
-
+\begin{area}{Teaching Experience}
 \begin{itemize}
     \item
         \textbf{Digital and Computational Photography (6.815/6.865)}, Teaching Assistant \hfill \emph{Spring 2019} \linebreak
@@ -136,11 +114,9 @@
             \item Course culminates in a competition for the best final project. Course website: \texttt{weblab.mit.edu}
         \end{itemize}
 \end{itemize}
+\end{area}
 
-\subsection*{Projects}
-\vspace*{-\baselineskip}
-\noindent\rule{\linewidth}{0.4pt}
-
+\begin{area}{Projects}
 \begin{itemize}
     \item
         \textbf{Learning Non-stationary SVBRDFs using GANs and Differentiable Rendering} \hfill \emph{Spring 2019} \linebreak
@@ -169,15 +145,14 @@
             \item Implemented an LSTM network using \emph{Torch} and trained it to emulate comments from the social media platform \emph{Reddit}.
         \end{itemize}
 \end{itemize}
+\end{area}
 
-\subsection*{Awards}
-\vspace*{-\baselineskip}
-\noindent\rule{\linewidth}{0.4pt}
-
+\begin{area}{Awards}
 \begin{itemize}
     \item \textbf{45\textsuperscript{th} International Physics Olympiad}, Silver Medal \hfill \emph{Summer 2014}
     \item \textbf{14\textsuperscript{th} Asian Physics Olympiad}, Bronze Medal \hfill \emph{Spring 2014}
     \item \textbf{44\textsuperscript{th} International Physics Olympiad}, Bronze Medal \hfill \emph{Summer 2013}
 \end{itemize}
+\end{area}
 
 \end{document}
