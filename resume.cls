@@ -1,7 +1,11 @@
-\ProvidesPackage{resume}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{resume}
+\LoadClass[10pt]{article}
 
+% Pazo font-family
+\RequirePackage[sc]{mathpazo}
 % Set paper margins
-\usepackage{geometry}
+\RequirePackage{geometry}
 \geometry{
     bmargin=2.5cm,
     tmargin=2.5cm,
@@ -12,11 +16,21 @@
 \setlength{\parindent}{0em}
 % Disable section numbering
 \setcounter{secnumdepth}{0}
+% Disable page numbering
+\pagenumbering{gobble}
 % Customize itemize environments
-\usepackage{enumitem}
-\setlist[itemize]{label={},leftmargin=*}
-% Pazo font-family
-\usepackage[sc]{mathpazo}
+\RequirePackage{enumitem}
+\setlist[itemize]{label={},leftmargin=*,nosep}
+% Configure area environment
+\newenvironment{area}[1]{
+    { \large\bfseries #1 }
+    \vspace{-0.5em}\\
+    \separator 
+    \begin{itemize}[itemsep=10pt]
+} {
+    \end{itemize}
+    \vspace{1.5em}
+}
 
 % Configure \maketitle command
 \newcommand*{\email}[1]{\gdef\@email{#1}}
@@ -36,16 +50,6 @@
 \@phone \hfill \texttt{\@website}
 \end{flushleft}
 \vspace{0.25em}
-}
-
-% Configure area environment
-\newenvironment{area}[1]{
-    { \large\bfseries #1 }
-    \vspace{-0.5em}\\
-    \separator 
-    \vspace{-0.5em}
-} {
-    \vspace{0.5em}
 }
 
 \endinput
