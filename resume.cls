@@ -7,10 +7,10 @@
 % Set paper margins
 \RequirePackage{geometry}
 \geometry{
-    bmargin=2.5cm,
-    tmargin=2.5cm,
-    lmargin=2.5cm,
-    rmargin=2.5cm
+    bmargin=2.25cm,
+    tmargin=2.25cm,
+    lmargin=2.25cm,
+    rmargin=2.25cm
 }
 % Set paragraph indent and spacing
 \setlength{\parindent}{0em}
@@ -47,7 +47,7 @@
 \separator
 \begin{flushleft}
 \texttt{\@email} \hfill \texttt{https://github.com/\@github/}\linebreak
-\@phone \hfill \texttt{\@website}
+\texttt{\@phone} \hfill \texttt{\@website}
 \end{flushleft}
 \vspace{0.25em}
 }
